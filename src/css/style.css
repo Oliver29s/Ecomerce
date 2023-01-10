@@ -285,7 +285,7 @@ img {
 
 }
   
-@media ( min-width: 700px) {
+@media ( min-width: 500px) {
   .contain_home{
     flex-direction: row-reverse;
     gap: 0;
@@ -296,7 +296,7 @@ img {
   }
   .section_home {
     height: 50vh;
-    min-height: 50vh;
+    min-height: 70vh;
 }
 
 .products_filter{
@@ -306,17 +306,30 @@ img {
 }
 
 
-@media ( min-width: 1024px){
+@media ( min-width: 900px){
   .section_home {
-    height: 90vh;
-    min-height: 90vh;
+    height: 100vh;
+    min-height: 100vh;
 }
+
+.grid_img, .home_data{
+  height: 100%;
+}
+
 
 .contain_cards{
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: auto;
   height: auto;
 }
+
+
+.home_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}  
+
 
 .bx-max{
   top: 35px;
