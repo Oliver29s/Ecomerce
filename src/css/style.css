@@ -182,6 +182,7 @@ img {
 
 .products_categories:hover{
   color: black;
+  background-image: url(../imagen/);
 }
 
 .products_categories{
