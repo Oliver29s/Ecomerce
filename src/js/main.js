@@ -7,7 +7,9 @@ let iconCard = document.querySelector(".bxs-cart");
 let containCards = document.querySelector(".contain_cards");
 let carProducts = document.querySelector('.car_products')
 let cartTotal = document.querySelector('.cart_total')
+let addCar = document.querySelector('.add_car')
 let objCarts = {}
+let total = 1
 
 iconCard.addEventListener("click", function () {
   contenCard.classList.toggle("content_card_click");
@@ -92,6 +94,7 @@ function printCartTotal(){
 
 containCards.addEventListener("click", function (e) {
   if (e.target.classList.contains("bx-max")) {
+    addCar.textContent = total++
     let idAll = Number(e.target.parentElement.parentElement.id);
     let findCart = products.find(function (product) {
       return product.id === idAll;
@@ -116,6 +119,7 @@ containCards.addEventListener("click", function (e) {
 carProducts.addEventListener('click',function(e){
  
       if(e.target.classList.contains('bx-plus')){
+        addCar.textContent = total++
         let idAll = Number(e.target.parentElement.parentElement.id)
         if(objCarts[idAll].amount >= objCarts[idAll].stock ){
           let res = confirm('Sorry, no more in stock')
@@ -128,10 +132,12 @@ carProducts.addEventListener('click',function(e){
         let res = confirm('Do you want to delete this product?')
           if(res){
             delete objCarts[idAll]
+            addCar.textContent = total
           }
         
       }
       if(e.target.classList.contains('bx-minus')){
+        addCar.textContent = --total
         let idAll = Number(e.target.parentElement.parentElement.id)
         if(objCarts[idAll].amount <= 1){
           let res = confirm('Do you want to delete this product?')

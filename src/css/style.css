@@ -42,10 +42,7 @@ body {
 }
 html{
     scroll-behavior: smooth;
-}
-/* .link{
-  background-color: black;
-} */
+} 
 
 img {
   width: 50px;
@@ -276,12 +273,28 @@ img {
   justify-content: space-evenly;
 }
 
+.contain_icon{
+  position: relative;
+}
+
+.contain_icon >p {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--text-color-light);
+  padding: 0 0.2rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
 .buttom_icon {
   background-color: var(--text-color-light);
   padding: 0.5rem;
   border-radius: 50%;
   cursor: pointer;
 }
+
+
 
 .car_total {
   height: 20%;
