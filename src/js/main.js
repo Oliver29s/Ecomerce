@@ -66,7 +66,7 @@ function printCartProducts(){
 
 function printCartTotal(){
   let cartArray = Object.values(objCarts)
-    if(!cartArray.length){
+    if(cartArray.length == 0){
       cartTotal.innerHTML =`
       <div class="cart_add">
                 <h3>Hello, there is nothing in the shopping cart.</h3>
@@ -82,7 +82,7 @@ function printCartTotal(){
     cartTotal.innerHTML = `
     <div class="cart_total2">
                 <h3>Total to pay is: ${sum}.00</h3>
-              <button class="button_total">Buy</button>
+              <button class="button_total2">Buy</button>
             </div>
     `
   
@@ -143,3 +143,5 @@ carProducts.addEventListener('click',function(e){
       printCartProducts()
       printCartTotal()
 })
+
+
